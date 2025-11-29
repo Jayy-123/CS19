@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Display Property</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* header */
+    .header {
+      height: 50px;
+      width: 100%;
+      background-color: black;
+      margin: 4px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header h2 {
+      color: white;
+      font-size: larger; /* fixed property name */
+      margin: 0;
+    }
+
+    /* main card */
+    .main {
+      width: 50%;
+      max-width: 480px;
+      background-color: lightgreen;
+      margin: 24px auto; /* center the card horizontally */
+      padding: 16px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .main img {
+      display: block;
+      max-width: 100%;
+      height: auto; /* preserve aspect ratio */
+      margin: 0 auto 12px;
+      border-radius: 6px;
+    }
+
+    .main h2 {
+      color: black;
+      font-size: x-large; /* fixed property name previously misused */
+      margin: 8px 0;
+    }
+
+    .main p {
+      margin: 6px 0;
+    }
+
+    .price {
+      display: block;
+      font-weight: 700;
+      margin: 6px 0 12px;
+    }
+
+    input[type="button"] {
+      display: inline-block;
+      padding: 8px 14px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color: #333;
+      color: white;
+      font-size: 1rem;
+    }
+
+    /* small responsive tweak */
+    @media (max-width: 600px) {
+      .main {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>Online Shopping</h2>
+  </div>
+
+  <div class="main">
+    <img
+      src="https://i.pinimg.com/736x/d8/df/c1/d8dfc118a0d42551ff4084d10a23254d.jpg"
+      alt="T-shirt shopping"
+    />
+    <h2>Cotton T-shirt</h2>
+    <p>This T-shirt is limited edition</p>
+    <span class="price">Rs 5,00,000/-</span>
+    <input type="button" value="Add to Cart" />
+  </div>
+</body>
+</html>
